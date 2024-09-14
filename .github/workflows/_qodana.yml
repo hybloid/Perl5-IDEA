@@ -25,7 +25,7 @@ jobs:
         with:
           use-caches: false
           upload-result: true
-          args: --baseline,.qodana/qodana.sarif.json,--linter,${{ env.QODANA_LINTER }}
+          args: --baseline,.qodana/qodana.sarif.json,--linter,${{ env.QODANA_LINTER }},--diff-start,f3d3c8e4d9f8dece6eadf40d3a7b95b80a5336e3
 
       - uses: github/codeql-action/upload-sarif@v3
         with:
